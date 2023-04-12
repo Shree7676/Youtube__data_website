@@ -1,0 +1,15 @@
+.img_h{
+    height: 200px;
+}
+@media (min-width:768px) {
+
+    .small-search {
+        width: 50%;
+    }
+
+}
+
+.blur {
+    filter: blur(10px);
+    pointer-events: none;
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <style>
+        .table td, .table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+    </style>
+{% endblock %}
+
+{% block body_detail %}
+   <div class="container">
+      <h1>Dataframe</h1>
+    {{ tables[0]|safe }}
+   </div>
+
+   <div class="container mt-5">
+<h2>
+    Top 5 <select>
+            <option>LIKED</option>
+            <option>VIEWED</option>
+            <option>COMMENTED</option>
+            <option>LATEST</option>
+        </select> 
+    videos of
+    <!-- videos of <option>LIKED</option>
+            <option>VIEWED</option>
+            <option>COMMENTED</option>
+            <option>LATEST</option> -->
+</h2>
+
+</div>
+{% endblock body_detail%}
